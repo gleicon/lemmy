@@ -1,0 +1,3 @@
+NAME=go-api-skel
+BINARY_DIR=bin
+VERSION=0.0.1
