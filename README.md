@@ -11,7 +11,9 @@ Currently lemmy uses redis to keep dynamic data and backend config. It can be ea
 ## Redis layout
 
 lemmy:<vhost> is a zset with backends sorted by current connections
+
 lemmy:deactivated:<vhost> is a zset with backends that presented errors, sorted by error number
+
 lemmy:stats:<vhost> realtime stats on vhosts
 
 
