@@ -11,6 +11,15 @@ type configFile struct {
 	TemplatesDir string `toml:"templates_dir"`
 	DocumentRoot string `toml:"document_root"`
 
+	LoadBalancer struct {
+		Prefix               string `toml:"prefix"`
+		VHostRefreshTime     int64  `toml:"vhost_refresh_time"`
+		BackendRetryInterval int64  `toml:"backend_retry_interval"`
+		RoundRobinAfter      int64  `toml:"round_robin_after"`
+		MaxFails             int64  `toml:"max_fails"`
+		MaxBackends          int    `toml:"max_backends"`
+	} `toml:"loadbalancer"`
+
 	DB struct {
 		DBConn string `toml:"db_conn"`
 		Redis  string `toml:"redis"`
